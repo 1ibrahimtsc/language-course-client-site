@@ -5,7 +5,7 @@ const PopularClasses = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/popularclasses")
+    fetch("https://assignment12-zeta.vercel.app/popularclasses")
       .then((res) => res.json())
       .then((data) => {
         setClasses(data);
@@ -64,7 +64,7 @@ const Popularclasses = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/popularclasses")
+    fetch("https://assignment12-zeta.vercel.app/popularclasses")
       .then((res) => res.json())
       .then((data) => {
         setClasses(data);

@@ -11,12 +11,12 @@ const PaymentHistory = () => {
 
   useEffect(() => {
     if (user?.email) {
-      axiosSecure(`http://127.0.0.1:5000/payments?email=${user.email}`).then(
-        (data) => {
-          setPayments(data.data);
-          setIsLoading(false);
-        }
-      );
+      axiosSecure(
+        `https://assignment12-zeta.vercel.app/payments?email=${user.email}`
+      ).then((data) => {
+        setPayments(data.data);
+        setIsLoading(false);
+      });
     }
   }, [user?.email]);
 

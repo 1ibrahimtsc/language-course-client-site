@@ -5,7 +5,7 @@ const PopularInstructors = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/popularinstructors")
+    fetch("https://assignment12-zeta.vercel.app/popularinstructors")
       .then((res) => res.json())
       .then((data) => {
         setInstructors(data);
