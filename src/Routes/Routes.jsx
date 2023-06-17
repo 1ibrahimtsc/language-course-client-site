@@ -27,6 +27,7 @@ import AdminRoute from "./AdminRoute";
 import InstructorRoute from "./InstructorRoute";
 import StudentRoute from "./StudentRoute";
 import Paymenthistory from "../pages/Paymenthistory/Paymenthistory";
+import Payment from "../pages/Dashboard/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -148,6 +149,14 @@ export const router = createBrowserRouter([
         element: (
           <StudentRoute>
             <Enrolledclasses></Enrolledclasses>
+          </StudentRoute>
+        ),
+      },
+      {
+        path: "payment",
+        element: (
+          <StudentRoute>
+            <Payment></Payment>
           </StudentRoute>
         ),
       },
