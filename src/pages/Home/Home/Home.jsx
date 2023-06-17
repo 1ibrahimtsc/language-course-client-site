@@ -13,7 +13,6 @@ const Home = () => {
       <SliderHome></SliderHome>
       <Popularclasses></Popularclasses>
       <Popularinstructors></Popularinstructors>
-
       <Testimonials></Testimonials>
     </div>
   );

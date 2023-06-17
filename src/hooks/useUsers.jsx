@@ -8,7 +8,7 @@ const useUsers = () => {
   } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await fetch("https://assignment12-zeta.vercel.app/users");
+      const res = await fetch("http://127.0.0.1:5000/users");
       return res.json();
     },
   });

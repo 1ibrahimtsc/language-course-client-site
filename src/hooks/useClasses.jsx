@@ -8,7 +8,7 @@ const useClasses = () => {
   } = useQuery({
     queryKey: ["classes"],
     queryFn: async () => {
-      const res = await fetch("https://assignment12-zeta.vercel.app/classes");
+      const res = await fetch("http://127.0.0.1:5000/classes");
       return res.json();
     },
   });

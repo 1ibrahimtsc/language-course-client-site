@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import useClasses from "../../../hooks/useClasses";
 
 const SliderHome = () => {
-  const [classes, refetch] = useClasses();
+  const [classes] = useClasses();
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {

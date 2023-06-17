@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 
-const Popularinstructors = () => {
+const PopularInstructors = () => {
   const [instructors, setInstructors] = useState([]);
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://assignment12-zeta.vercel.app/popularinstructors")
+    fetch("http://127.0.0.1:5000/popularinstructors")
       .then((res) => res.json())
       .then((data) => {
         setInstructors(data);
@@ -24,26 +23,24 @@ const Popularinstructors = () => {
       {isLoading ? (
         <p>Loading...</p>
       ) : (
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {instructors.map((instructor) => (
             <div
               key={instructor._id}
-              className="card w-96 bg-base-100 shadow-xl"
+              className="card w-full md:w-96 bg-base-100 shadow-xl"
             >
               <figure>
                 <img
                   src={instructor.photoURL}
-                  className="w-5/6 h-5/6"
+                  className="w-full h-auto"
                   alt={instructor.name}
                 />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title">
-                  Instructor Name :{instructor.name}
+              <div className="card-body p-4">
+                <h2 className="card-title text-lg font-semibold">
+                  Instructor Name: {instructor.name}
                 </h2>
-                <h3 className="card-title">Email :{instructor.email}</h3>
-                <h3 className="card-title">{instructor.instructor}</h3>
-
+                <h3 className="card-title">Email: {instructor.email}</h3>
                 <p>Enrolled Students: {instructor.enrolledstudent}</p>
               </div>
             </div>
@@ -54,4 +51,4 @@ const Popularinstructors = () => {
   );
 };
 
-export default Popularinstructors;
+export default PopularInstructors;

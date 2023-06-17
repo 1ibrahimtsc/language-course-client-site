@@ -7,8 +7,8 @@ const InstructorHome = () => {
 
   return (
     <div className="w-full m-4">
-      <SectionTitle heading={user.displayName} subHeading="Welcome" />
-      <h2 className="text-3xl">Hi-------------, {user.displayName}</h2>
+      <SectionTitle heading={user?.displayName} subHeading="Welcome" />
+      <h2 className="text-3xl">Hi-------------, {user?.displayName}</h2>
     </div>
   );
 };

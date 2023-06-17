@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { FaShoppingCart } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 
